@@ -26,7 +26,8 @@ let contador = 0;
 
 boton.addEventListener("click", () => {
   contador++;
-  contadorMensaje.textContent = `Has hecho clic ${contador} veces.`;
+  contadorMensaje.textContent = `Has hecho clic ${contador} veces`;
+   contadorMensaje.style.color = "black";
 
   if (contador >= 10) {
     contadorMensaje.style.color = "green";
@@ -35,8 +36,23 @@ boton.addEventListener("click", () => {
 
 reiniciar.addEventListener("click", () => {
 
-    contador=0;
-    contadorMensaje.textContent = `Has hecho clic ${contador=0} veces.`
+    contadorMensaje.textContent = `Has hecho clic ${contador=0} veces`
 
 })
+
+//=============================== EJERCICIO 3 ==========================================
+
+const textomismo = document.getElementById("textomismo");
+const textomismoMensaje = document.getElementById("textomismo-mensaje");
+
+textomismo.addEventListener("input", () => {
+  const textoIngresado = textomismo.value.trim();
+
+  if (textoIngresado === "") {
+    textomismoMensaje.textContent = "Por favor, escribe algo en el área de texto.";
+    return;
+  }
+
+  textomismoMensaje.textContent = `Texto ingresado: ${textoIngresado}`;
+});
 

@@ -56,3 +56,5 @@ textomismo.addEventListener("input", () => {
   textomismoMensaje.textContent = `Texto ingresado: ${textoIngresado}`;
 });
 
+//=============================== EJERCICIO 4 ==========================================
+
